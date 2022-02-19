@@ -18,7 +18,7 @@ function ContextProvider(props) {
       title,
       label: "CP",
       comment: 2,
-      likes: 3
+      likes: 3,
     };
 
     const updatedBoard = boardData.find((boardObj) => boardObj.id === boardId);
@@ -32,14 +32,10 @@ function ContextProvider(props) {
   }
 
   function handleDragEnter(boardId, cardId) {
-
     setTarget({ cardId, boardId });
-    console.log("dragenter " ,{ cardId, boardId })
-
   }
 
   function handleDragEnd(boardId, cardId) {
-    console.log("Dragend")
     let sourceBoardIndex, sourceCardIndex, targetBoardIndex, targetCardIndex;
 
     sourceBoardIndex = boardData.findIndex(
